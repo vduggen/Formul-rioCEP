@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário CEP</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <article>
+            <header>
+                <h1>Formulário CEP</h1>
+                <p>
+                    Pegue informações sobre seu CEP de forma rápida e prática basta alguns segundos!
+                </p>
+            </header>
+
+            <div id="Erro"></div>
+
+            <section>
+                <form action="" onsubmit="return false">
+                    <section id="options">
+                        <label>Escolha a opção que deseja:</label>
+                        <select onchange="choose(this)">
+                            <option value="-1">Nenhum</option>
+                            <option value="0">Pesquisar informações sobre o CEP</option>
+                            <option value="1">Saber o número do CEP</option>
+                        </select>
+                    </section>
+
+                    <section id="searchCEPInputs" class="d-hidden">
+                        <label for="cepValue">CEP *</label>
+                        <input 
+                            type="text"
+                            name="cepValue"
+                            id="cepValue"
+                            placeholder="Digite seu CEP"
+                        >
+
+                        <section id="infos" class="d-hidden">
+                            <label>Nome da Rua</label>
+                            <input 
+                                type="text"
+                                id="streetName"
+                                value=""
+                                disabled
+                            >
+
+                            <label>Cidade</label>
+                            <input 
+                                type="text"
+                                id="cityName"
+                                disabled
+                            >
+
+                            <label>UF</label>
+                            <input 
+                                type="text"
+                                id="state"
+                                disabled
+                            >
+                        </section>
+                        
+                        <nav class="groupButtons">
+                            <button type="reset" onclick="setHidden('infos')">Limpar</button>
+                            <button onclick="infosCEP()">Buscar</button>
+                        </nav>
+                    </section>
+
+                    <section id="searchInfosInputs" class="d-hidden">
+                        <section id="valueCEP" class="d-hidden">
+                            <label for="cep">CEP *</label>
+                            <input 
+                                type="text"
+                                name="cep"
+                                id="cep"
+                                disabled
+                            >
+                        </section>
+
+                        <label for="nameRua">Nome da Rua *</label>
+                        <input 
+                            type="text"
+                            name="nameRua"
+                            id="nameRua"
+                            placeholder="Digite o Nome da Rua"
+                        >
+
+                        <label for="cidade">Cidade *</label>
+                        <input 
+                            type="text"
+                            name="cidade"
+                            id="cidade"
+                            placeholder="Cidade"
+                        >
+
+                        <label for="uf">UF *</label>
+                        <input 
+                            type="text"
+                            name="uf"
+                            id="uf"
+                            placeholder="UF"
+                        >
+                        
+                        <nav class="groupButtons">
+                            <button type="reset" onclick="setHidden('valueCEP')">Limpar</button>
+                            <button onclick="searchCEP()">Buscar</button>
+                        </nav>
+                    </section>
+                </form>
+            </section>
+        </article>
+    </main>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

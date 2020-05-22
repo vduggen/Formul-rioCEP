@@ -15,3 +15,21 @@ O formulário não pode ser submetido enquanto todos os campos não estiverem pr
 <ol>
   <li>A utilizar a Fetch API </li>
 </ol>
+
+### Como utilizar:
+<ol>  
+  <h2>Com Terminal</h2>
+  <li>Abra o terminal</li>
+  <li>digite git clone https://github.com/vduggen/FormularioCEP.git</li>
+  <li>cd FormularioCEP</li>
+  <li>Abra o arquivo <strong>index.html</strong></li>
+</ol>
+
+<ol>  
+  <h2>Sem Terminal</h2>
+  <li>Clique no botão verde <strong>Clone ou Download</strong></li>
+  <li>Depois clique no botão <strong>Download ZIP</strong></li>
+  <li>Descompacte a pasta.</li>
+  <li>Abra o arquivo <strong>index.html</strong></li>
+</ol>
+
